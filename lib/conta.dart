@@ -1,6 +1,6 @@
 class Conta{
   String titular;
-  double saldo;
+  double _saldo;
 
   Conta(this.titular, this.saldo);
 
