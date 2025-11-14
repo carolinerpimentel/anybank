@@ -1,3 +1,5 @@
+import 'package:anybank/conta.dart';
+
 void main() {
 
 Conta contaMatheus = Conta("Matheus", 1000);
