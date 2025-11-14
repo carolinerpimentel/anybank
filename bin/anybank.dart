@@ -17,21 +17,13 @@ print("");
 print("Novo saldo de ${contaRoberta.titular}: R\$${contaRoberta.saldo.toStringAsFixed(2)}");
 print("");
 
-receber(contaMatheus, 500);
-receber(contaRoberta, 3000);
+contaMatheus.receber(500);
+contaRoberta.receber(3000);
 
 print("Novo saldo de ${contaRoberta.titular}: R\$${contaRoberta.saldo.toStringAsFixed(2)}");
 print("Novo saldo de ${contaMatheus.titular}: R\$${contaMatheus.saldo.toStringAsFixed(2)}");
 print("");
 
-}
-
-void receber(Conta conta, double valor){
-  conta.saldo += valor;
-}
-
-void enviar(Conta conta, double valor){
-  conta.saldo -= valor;
 }
 
 class Conta{
@@ -40,4 +32,11 @@ class Conta{
 
   Conta(this.titular, this.saldo);
 
+  void receber(double valor){
+  saldo += valor;
+  }
+
+  void enviar(double valor){
+  saldo -= valor;
+  }
 }
