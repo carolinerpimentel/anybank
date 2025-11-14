@@ -2,13 +2,13 @@ class Conta{
   String titular;
   double _saldo;
 
-  Conta(this.titular, this.saldo);
+  Conta(this.titular, this._saldo);
 
   void receber(double valor){
-  saldo += valor;
+  _saldo += valor;
   }
 
   void enviar(double valor){
-  saldo -= valor;
+  _saldo -= valor;
   }
 }
