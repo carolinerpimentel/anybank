@@ -4,11 +4,16 @@ class Conta{
 
   Conta(this.titular, this._saldo);
 
-  void receber(double valor){
-  _saldo += valor;
+  void receber(double valor){ 
+    _saldo += valor;
   }
 
   void enviar(double valor){
-  _saldo -= valor;
+
+    if(valor >= _saldo){
+      _saldo -= valor;
+    } else {
+      print("Saldo insuficiente!");
+    }
   }
 }
