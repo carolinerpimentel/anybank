@@ -10,10 +10,10 @@ List<Conta> contas = <Conta>[contaMatheus, contaRoberta];
 print("");
 
 for(Conta conta in contas){
-    print("Nome: ${conta.titular}, Saldo: R\$${conta.saldo.toStringAsFixed(2)}");
+  print("Nome: ${conta.titular}, Saldo: R\$${conta.saldo.toStringAsFixed(2)}");
 }
 
-contaRoberta.saldo = 5000;
+contaRoberta.receber(5000);
 
 print("");
 print("Novo saldo de ${contaRoberta.titular}: R\$${contaRoberta.saldo.toStringAsFixed(2)}");
