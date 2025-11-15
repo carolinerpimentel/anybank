@@ -11,7 +11,7 @@ class Conta{
 
   void enviar(double valor){
 
-    if(valor >= _saldo){
+    if(valor < _saldo){
       _saldo -= valor;
 
       imprimeSaldo();
