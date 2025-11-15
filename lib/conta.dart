@@ -15,13 +15,14 @@ class Conta{
       _saldo -= valor;
 
       imprimeSaldo();
-      
+
     } else {
       print("Saldo insuficiente!");
     }
   }
 
   void imprimeSaldo(){
+    print("");
     print("O valor do saldo de $titular é R\$${_saldo.toStringAsFixed(2)}");
   }
 }
