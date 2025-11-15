@@ -6,14 +6,22 @@ class Conta{
 
   void receber(double valor){ 
     _saldo += valor;
+    imprimeSaldo();
   }
 
   void enviar(double valor){
 
     if(valor >= _saldo){
       _saldo -= valor;
+
+      imprimeSaldo();
+      
     } else {
       print("Saldo insuficiente!");
     }
+  }
+
+  void imprimeSaldo(){
+    print("O valor do saldo de $titular é R\$${_saldo.toStringAsFixed(2)}");
   }
 }
