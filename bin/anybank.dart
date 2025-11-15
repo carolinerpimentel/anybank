@@ -11,8 +11,6 @@ for(Conta conta in contas){
   conta.imprimeSaldo();
 }
 
-contaRoberta.receber(5000);
-
 contaMatheus.receber(500);
 contaRoberta.receber(3000);
 
