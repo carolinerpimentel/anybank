@@ -26,3 +26,13 @@ class Conta{
     print("O valor do saldo de $titular é R\$${_saldo.toStringAsFixed(2)}");
   }
 }
+
+class ContaCorrente extends Conta{
+
+  ContaCorrente(super.titular, super._saldo);
+}
+
+class ContaPoupanca extends Conta{
+
+  ContaPoupanca(super.titular, super._saldo);
+}
