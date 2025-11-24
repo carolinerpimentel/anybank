@@ -50,4 +50,11 @@ class ContaPoupanca extends Conta{
   double rendimento = 0.05;
 
   ContaPoupanca(super.titular, super._saldo);
+
+  double? calculaRendimento(){
+
+    double valorRendido = _saldo * rendimento;
+
+    return valorRendido + _saldo;
+  }
 }
