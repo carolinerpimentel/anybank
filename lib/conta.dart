@@ -28,11 +28,22 @@ class Conta{
 }
 
 class ContaCorrente extends Conta{
-  double emprestimo;
+  double emprestimo = 300;
 
-  ContaCorrente(super.titular, super._saldo, this.emprestimo){
-    emprestimo = 300;
-  }
+  ContaCorrente(super.titular, super._saldo);
+    
+  @override
+  void enviar(double valor) {
+    
+    if(valor <= (_saldo + emprestimo)){
+      _saldo -= valor;
+      imprimeSaldo();
+    } else {
+        print("");
+        print("Saldo insuficiente!");
+        imprimeSaldo();
+    }
+  } 
 }
 
 class ContaPoupanca extends Conta{
