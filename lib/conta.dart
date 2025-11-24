@@ -28,8 +28,11 @@ class Conta{
 }
 
 class ContaCorrente extends Conta{
+  double emprestimo;
 
-  ContaCorrente(super.titular, super._saldo);
+  ContaCorrente(super.titular, super._saldo, this.emprestimo){
+    emprestimo = 300;
+  }
 }
 
 class ContaPoupanca extends Conta{
