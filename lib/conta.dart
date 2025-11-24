@@ -47,6 +47,7 @@ class ContaCorrente extends Conta{
 }
 
 class ContaPoupanca extends Conta{
+  double rendimento = 0.05;
 
   ContaPoupanca(super.titular, super._saldo);
 }
